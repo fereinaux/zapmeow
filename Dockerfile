@@ -9,7 +9,7 @@ COPY . .
 
 RUN ls -la
 
-RUN go mod download
+RUN go mod tidy && go mod download
 
 ENV CGO_ENABLED=1
 ENV CGO_CFLAGS="-D_LARGEFILE64_SOURCE"
